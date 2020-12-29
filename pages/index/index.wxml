@@ -1,2 +1,12 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+  内容
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        {{item}}
+        <view class="swiper-item {{item}}"></view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
